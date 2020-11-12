@@ -27,6 +27,10 @@ h6,
     font-family: "Raleway", sans-serif;
 }
 
+ul li {
+    line-height: 2;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -384,7 +388,6 @@ section {
     position: relative;
     font-size: 32px;
     font-weight: 700;
-    color: #4e4039;
 }
 
 .section-title p::after {
@@ -411,6 +414,17 @@ section {
     background-repeat: no-repeat;
     margin: 72px 0 -72px 0;
     text-align: center;
+    animation: slide-in 1.2s ease-in 0s 1 forwards;
+}
+
+@keyframes slide-in {
+    0% {
+        background-position: 0 -200px;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
 }
 
 #banner h1 {
@@ -428,10 +442,6 @@ section {
     font-weight: bold;
 }
 
-#banner .banner-logo {
-    width: 50%;
-}
-
 #banner .cities {
     position: absolute;
     bottom: 0;
@@ -440,7 +450,7 @@ section {
 
 #banner .btn-get-started:hover {
     transform: translateY(-3px);
-    background: #2ba5e9;
+    animation: change 4s ease-in-out 0s infinite alternate;
     color: white;
 }
 
@@ -507,7 +517,7 @@ section {
 
 .features .btn-get-started:hover {
     transform: translateY(-3px);
-    background: #ed57bf;
+    animation: change 4s ease-in-out 0s infinite alternate;
     color: white;
 }
 
@@ -621,6 +631,138 @@ section {
     transition: left ease-in-out 0.3s;
 }
 
+/*--------------------------------------------------------------
+# team
+--------------------------------------------------------------*/
+.team .team-item {
+    margin-bottom: 30px;
+}
+
+.team .team-wrap {
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.team .team-wrap::before {
+    content: "";
+    background: rgba(35, 40, 107, 0.5);
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    border-radius: 50%;
+    transform: scale(0);
+}
+
+.team .team-wrap img {
+    transition: 0.3s;
+    position: relative;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.team .team-wrap .team-links {
+    opacity: 0;
+    left: 0;
+    right: 0;
+    top: calc(50% - 32px);
+    text-align: center;
+    z-index: 3;
+    position: absolute;
+    transition: all ease-in-out 0.3s;
+}
+
+.team .team-wrap .team-links a {
+    color: #2ba5e9;
+    margin: 0 4px;
+    font-size: 18px;
+    line-height: 1;
+    background-color: #fff;
+    padding-top: 6px;
+    padding-right: 1px;
+    border-radius: 50%;
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.team .team-wrap .team-links a i {
+    line-height: 1.2;
+}
+
+.team .team-wrap .team-links a:hover {
+    color: #fff;
+    animation: change 4s ease-in-out 0s infinite alternate;
+}
+
+@keyframes change {
+    0% {
+        background: #2ba5e9;
+    }
+
+    100% {
+        background: #ed57bf;
+    }
+}
+
+.team .team-wrap .team-info {
+    opacity: 0;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 3;
+    transition: all ease-in-out 0.3s;
+}
+
+.team .team-wrap .team-info h4 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.team .team-wrap .team-info p {
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.team .team-wrap:hover::before {
+    left: 0;
+    transform: scale(1);
+}
+
+.team .team-wrap:hover .team-links {
+    opacity: 1;
+    top: calc(50% - 16px);
+}
+
+.team .team-wrap:hover .team-info {
+    opacity: 1;
+    bottom: 0;
+}
+
+/*------------------------------------
+ Call For Proposals
+--------------------------------------*/
+
+blockquote {
+    border-left: 5px solid #eee;
+    padding: 10px;
+    margin-left: 20px;
+    font-style: italic;
+}
+
 /*------------------------------------
 # Footer 
 ------------------------------------*/
@@ -723,4 +865,25 @@ section {
     background: #2ba5e9;
     color: #fff;
     text-decoration: none;
+}
+
+#footer .copyright {
+    text-align: center;
+    float: left;
+    color: #ccc;
+}
+
+#footer .copyright a {
+    color: #6fb8df;
+}
+
+@media (max-width: 575px) {
+
+    #footer .copyright,
+    #footer .credits {
+        float: none;
+        -moz-text-align-last: center;
+        text-align-last: center;
+        padding: 3px 0;
+    }
 }

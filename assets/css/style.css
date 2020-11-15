@@ -84,12 +84,13 @@ ul li {
 }
 
 #header .logo h1 {
-    font-size: 30px;
+    font-size: 25px;
+    font-weight: 600;
     margin: 0;
     padding: 6px 0;
     line-height: 1;
     font-weight: 400;
-    letter-spacing: 2px;
+    color: #2ba5e9;
 }
 
 #header .logo h1 a,

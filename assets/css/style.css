@@ -31,6 +31,24 @@ ul li {
     line-height: 2;
 }
 
+.bg-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background: #23286b;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -42,10 +60,10 @@ ul li {
     border-radius: 3px;
     right: 15px;
     bottom: 15px;
-    background: #2ba5e9;
+    background: #3779b0;
     color: #fff;
     transition: display 0.5s ease-in-out;
-    z-index: 99999;
+    z-index: 999;
 }
 
 .back-to-top i {
@@ -57,9 +75,10 @@ ul li {
 
 .back-to-top:hover {
     color: #fff;
-    background: #ed57bf;
+    background: #ffcd3b;
     transition: background 0.2s ease-in-out;
 }
+
 
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
@@ -76,7 +95,7 @@ ul li {
 #header {
     height: 72px;
     transition: all 0.5s;
-    z-index: 997;
+    z-index: 990;
     transition: all 0.5s;
     padding: 15px 0;
     background: #23286b;
@@ -90,12 +109,12 @@ ul li {
     padding: 6px 0;
     line-height: 1;
     font-weight: 400;
-    color: #2ba5e9;
+    color: #3779b0;
 }
 
 #header .logo h1 a,
 #header .logo h1 a:hover {
-    color: #2ba5e9;
+    color: #3779b0;
     text-decoration: none;
 }
 
@@ -139,12 +158,12 @@ ul li {
 .nav-menu a:hover,
 .nav-menu .active>a,
 .nav-menu li:hover>a {
-    color: #ed57bf;
+    color: #ffcd3b;
     text-decoration: none;
 }
 
 .nav-menu .get-started a {
-    background: #2ba5e9;
+    background: #3779b0;
     color: #fff;
     border-radius: 50px;
     margin: 0 15px;
@@ -152,7 +171,7 @@ ul li {
 }
 
 .nav-menu .get-started a:hover {
-    background: #ed57bf;
+    background: #ffcd3b;
     color: #fff;
 }
 
@@ -186,13 +205,13 @@ ul li {
     font-size: 14px;
     font-weight: 500;
     text-transform: none;
-    color: #ed57bf;
+    color: #ffcd3b;
 }
 
 .nav-menu .drop-down ul a:hover,
 .nav-menu .drop-down ul .active>a,
 .nav-menu .drop-down ul li:hover>a {
-    color: #ed57bf;
+    color: #ffcd3b;
 }
 
 .nav-menu .drop-down>a:after {
@@ -242,7 +261,7 @@ ul li {
     position: fixed;
     top: 0;
     bottom: 0;
-    z-index: 9999;
+    z-index: 999;
     overflow-y: auto;
     left: -260px;
     width: 260px;
@@ -269,12 +288,12 @@ ul li {
 .mobile-nav a:hover,
 .mobile-nav .active>a,
 .mobile-nav li:hover>a {
-    color: #ed57bf;
+    color: #ffcd3b;
     text-decoration: none;
 }
 
 .mobile-nav .get-started a {
-    background: #2ba5e9;
+    background: #3779b0;
     color: #fff;
     border-radius: 50px;
     margin: 15px;
@@ -282,7 +301,7 @@ ul li {
 }
 
 .mobile-nav .get-started a:hover {
-    background: #2ba5e9;
+    background: #3779b0;
     color: #fff;
 }
 
@@ -315,7 +334,7 @@ ul li {
     position: fixed;
     right: 15px;
     top: 22px;
-    z-index: 9998;
+    z-index: 999;
     border: 0;
     background: none;
     font-size: 24px;
@@ -327,13 +346,13 @@ ul li {
 }
 
 .mobile-nav-toggle i {
-    color: #6fb8df;
+    color: #3779b0;
 }
 
 .mobile-nav-overly {
     width: 100%;
     height: 100%;
-    z-index: 9997;
+    z-index: 996;
     top: 0;
     left: 0;
     position: fixed;
@@ -397,7 +416,7 @@ section {
     display: block;
     width: 60px;
     height: 2px;
-    background: #2ba5e9;
+    background: #3779b0;
     bottom: 0;
     left: calc(50% - 30px);
 }
@@ -437,7 +456,7 @@ section {
 }
 
 #banner h2 {
-    color: #ed57bf;
+    color: #ffcd3b;
     margin-bottom: 50px;
     font-size: 24px;
     font-weight: bold;
@@ -465,9 +484,9 @@ section {
     border-radius: 20px;
     transition: 0.5s;
     margin: 10px;
-    color: #fff;
+    color: #23286b;
     font-weight: bold;
-    background: #ed57bf;
+    background: #ffcd3b;
     transition: 0.8s;
 }
 
@@ -490,14 +509,14 @@ section {
 
 .features .icon-box:hover {
     transform: translateY(-5px);
-    border-color: #2ba5e9;
+    border-color: #3779b0;
 }
 
 .features .icon i {
     font-size: 48px;
     line-height: 1;
     margin-bottom: 15px;
-    color: #2ba5e9;
+    color: #3779b0;
 }
 
 .features .title {
@@ -534,10 +553,21 @@ section {
     margin: 10px;
     color: #fff;
     font-weight: bold;
-    background: #2ba5e9;
+    background: #3779b0;
     transition: 0.8s;
 }
 
+/*----------------------------------------------------
+# Sponsors
+-----------------------------------------------------*/
+
+#sponsors img {
+    transition: 0.5s ease-in-out;
+}
+
+#sponsors img:hover {
+    transform: scale(1.05);
+}
 
 /*--------------------------------------------------------------
 # Speaker
@@ -607,7 +637,7 @@ section {
 }
 
 .speaker .member .social a:hover {
-    color: #2ba5e9;
+    color: #3779b0;
 }
 
 .speaker .member .social i {
@@ -633,7 +663,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# team
+# Team
 --------------------------------------------------------------*/
 .team .team-item {
     margin-bottom: 30px;
@@ -681,7 +711,7 @@ section {
 }
 
 .team .team-wrap .team-links a {
-    color: #2ba5e9;
+    color: #3779b0;
     margin: 0 4px;
     font-size: 18px;
     line-height: 1;
@@ -707,11 +737,11 @@ section {
 
 @keyframes change {
     0% {
-        background: #2ba5e9;
+        background: #3779b0;
     }
 
     100% {
-        background: #ed57bf;
+        background: #ffcd3b;
     }
 }
 
@@ -820,7 +850,7 @@ blockquote {
 
 #footer .footer-top .footer-links ul i {
     padding-right: 2px;
-    color: #ed57bf;
+    color: #ffcd3b;
     font-size: 18px;
     line-height: 1;
 }
@@ -844,13 +874,13 @@ blockquote {
 
 #footer .footer-top .footer-links ul a:hover {
     text-decoration: none;
-    color: #ed57bf;
+    color: #ffcd3b;
 }
 
 #footer .footer-top .social-links a {
     font-size: 18px;
     display: inline-block;
-    background: #ed57bf;
+    background: #ffcd3b;
     color: #fff;
     line-height: 1;
     padding: 8px 0;
@@ -863,7 +893,7 @@ blockquote {
 }
 
 #footer .footer-top .social-links a:hover {
-    background: #2ba5e9;
+    background: #3779b0;
     color: #fff;
     text-decoration: none;
 }

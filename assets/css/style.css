@@ -539,13 +539,15 @@ section {
     margin-bottom: 0;
 }
 
-.features .btn-get-started:hover {
+.features .btn-get-started:hover,
+#schedule .btn-get-started:hover {
     transform: translateY(-3px);
     animation: change 4s ease-in-out 0s infinite alternate;
     color: white;
 }
 
-.features .btn-get-started {
+.features .btn-get-started,
+#schedule .btn-get-started {
     font-family: "Raleway", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -914,6 +916,14 @@ blockquote {
     padding: 10px;
     margin-left: 20px;
     font-style: italic;
+}
+
+/*-----------------------------------
+# Schedule 
+------------------------------------*/
+
+.schedule-table td {
+    vertical-align: middle !important;
 }
 
 /*------------------------------------

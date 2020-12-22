@@ -786,6 +786,18 @@ section {
     transition: left ease-in-out 0.3s;
 }
 
+.talks-list div {
+    height: 115px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: #ddd 2px 2px 3px 2px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/

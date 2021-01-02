@@ -787,15 +787,27 @@ section {
 }
 
 .talks-list div {
-    height: 115px;
+    /* height: 8rem; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     box-shadow: #ddd 2px 2px 3px 2px;
     padding: 10px;
-    margin: 10px;
+    margin: 3rem 10px;
     border-radius: 10px;
     text-align: center;
+}
+
+.talks-list div span {
+    margin-top: 1.5em;
+}
+
+.talks-list div img {
+    width: 7rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -5rem;
+    left: calc(50% - 3.5rem);
 }
 
 /*--------------------------------------------------------------

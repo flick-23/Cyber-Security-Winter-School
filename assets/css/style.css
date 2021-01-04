@@ -786,17 +786,42 @@ section {
     transition: left ease-in-out 0.3s;
 }
 
-.talks-list div {
+.talks-list .col-md-3 {
     /* height: 8rem; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     box-shadow: #ddd 2px 2px 3px 2px;
-    padding: 10px;
+    padding: 15px;
     margin: 3rem 10px;
     border-radius: 10px;
     text-align: center;
 }
+
+.talks-list .col-md-3 .desc {
+    -webkit-transition: max-height 0.7s ease-in-out, color 0.5s ease-in-out 0s;
+    -moz-transition: max-height 0.7s ease-in-out, color 0.5s ease-in-out 0s;
+    -ms-transition: max-height 0.7s ease-in-out, color 0.5s ease-in-out 0s;
+    -o-transition: max-height 0.7s ease-in-out, color 0.5s ease-in-out 0s ;
+    transition: max-height 0.7s ease-in-out, color 0.5s ease-in 0s;
+    max-height: 0;
+    color: transparent;
+}
+
+.talks-list .col-md-3:hover > span {
+    font-weight: bold;
+}
+
+.talks-list .col-md-3:hover > span b {
+    color: #666;
+}
+
+.talks-list .col-md-3:hover > .desc {
+    cursor: pointer;
+    max-height: 300px;
+    color: black;
+}
+
 
 .talks-list div span {
     margin-top: 1.5em;
@@ -808,6 +833,22 @@ section {
     position: absolute;
     top: -5rem;
     left: calc(50% - 3.5rem);
+}
+
+.talks-list div #img1 {
+    width: 7rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -5rem;
+    left: calc(50% - 6.5rem);
+}
+
+.talks-list div #img2 {
+    width: 7rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -5rem;
+    left: calc(50% - 0.5rem);
 }
 
 /*--------------------------------------------------------------

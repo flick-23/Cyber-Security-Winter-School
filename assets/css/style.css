@@ -919,10 +919,10 @@ section {
     line-height: 1.2;
 }
 
-.team .team-wrap .team-links a:hover {
+/* .team .team-wrap .team-links a:hover {
     color: #fff;
     animation: change 4s ease-in-out 0s infinite alternate;
-}
+} */
 
 @keyframes change {
     0% {
@@ -957,20 +957,20 @@ section {
     text-transform: uppercase;
 }
 
-.team .team-wrap:hover::before {
+/* .team .team-wrap:hover::before {
     left: 0;
     transform: scale(1);
-}
+} */
 
-.team .team-wrap:hover .team-links {
+/* .team .team-wrap:hover .team-links {
     opacity: 1;
     top: calc(50% - 16px);
-}
+} */
 
-.team .team-wrap:hover .team-info {
+/* .team .team-wrap:hover .team-info {
     opacity: 1;
     bottom: 0;
-}
+} */
 
 /*------------------------------------
  Call For Proposals
